@@ -1,23 +1,27 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import { Navbar, Nav, NavDropdown, Col } from "react-bootstrap";
-import { FaRegHeart } from "react-icons/fa";
 import { AiOutlineShopping } from "react-icons/ai";
-import { IoIosSearch, IoMdMenu } from "react-icons/io";
+import { IoIosSearch, IoMdMenu, IoMdHeartEmpty } from "react-icons/io";
 
 export default function Header() {
   return (
     <div className="nav-container">
-      <Col xl={2} lg={2} md={6} sm={6} xs={6}>
+      <Col xl={1} lg={1} md={6} sm={6} xs={6}>
         <Navbar.Brand href="/">
           <img src={logo} className="App-logo" alt="logo" />
         </Navbar.Brand>
       </Col>
-      <Col className="d-none d-lg-block" xl={8} lg={8}>
+      <Col className="d-none d-lg-block" xl={9} lg={9}>
         <Nav className="justify-content-center">
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-          <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+          <Nav.Link href="#features">New</Nav.Link>
+          <Nav.Link href="#pricing">Clothing</Nav.Link>
+          <Nav.Link href="#pricing">Shoes</Nav.Link>
+          <Nav.Link href="#pricing">Accessirues</Nav.Link>
+          <Nav.Link href="#pricing">Sales</Nav.Link>
+          <Nav.Link href="#pricing">About US</Nav.Link>
+
+          {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Another action
@@ -27,7 +31,7 @@ export default function Header() {
             <NavDropdown.Item href="#action/3.4">
               Separated link
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
         </Nav>
       </Col>
 
@@ -40,7 +44,7 @@ export default function Header() {
         xs={6}
       >
         <a href="/">
-          <FaRegHeart />
+          <IoMdHeartEmpty />
         </a>
         <a href="/">
           <AiOutlineShopping />
