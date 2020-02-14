@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.png";
-import { Navbar, Nav, NavDropdown, Col } from "react-bootstrap";
+import logo from "../../assets/logo.png";
+import { Navbar, Nav, Col } from "react-bootstrap";
 import { AiOutlineShopping } from "react-icons/ai";
 import { IoIosSearch, IoMdMenu, IoMdHeartEmpty } from "react-icons/io";
 
