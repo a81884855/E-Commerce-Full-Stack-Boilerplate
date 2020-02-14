@@ -1,5 +1,5 @@
 .nav-container {
-  width: 96%;
+  width: 98%;
   align-items: center;
   display: flex;
   margin: 0 auto;
@@ -9,7 +9,11 @@
     font-weight: 700;
     text-transform: uppercase;
     color: black;
-    font-size: 20px;
+    font-size: 19px;
+  }
+
+  a:hover {
+    color: #fc4f4f;
   }
 
   .App-logo {
@@ -27,9 +31,5 @@
   .nav-header-right a {
     font-size: 2rem;
     margin: 0 5px 0 5px;
-  }
-
-  .nav-header-right a:hover {
-    color: #fc4f4f;
   }
 }
