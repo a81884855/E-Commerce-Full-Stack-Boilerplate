@@ -7,7 +7,6 @@ function App() {
     <>
       <Header />
       <SliderArea />
-      <div className="App">Hello</div>
     </>
   );
 }
