@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./web/Header";
-import SliderArea from "./web/SliderArea";
+import SliderArea from "./web/Slider";
 
 function App() {
   return (
