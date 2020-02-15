@@ -8,7 +8,7 @@ const slider = [slider1, slider2];
 const SliderArea = () => {
   const [index, setIndex] = useState(0);
   return (
-    <Row className="slider-area pt-120 p2vw">
+    <Row className="slider-area pt-120 ps-2vw">
       <Col
         className="slider-info  pt-40"
         xs={{ span: 12, order: 2 }}
