@@ -1,0 +1,19 @@
+.product-container {
+  width: 100%;
+
+  .initalImage {
+    opacity: 1;
+  }
+
+  .initalImage:hover {
+    opacity: 0;
+  }
+
+  .secondImage {
+    opacity: 0;
+  }
+
+  .secondImage:hover {
+    opacity: 1;
+  }
+}
