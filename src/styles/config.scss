@@ -6,12 +6,20 @@
   margin-bottom: 70px;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
 .mt-40 {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .pt-120 {
   padding-top: 120px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
 }
 
 .ps-2vw {
@@ -31,13 +39,14 @@
 .section-title-1 {
   text-align: center !important;
   width: 100%;
+  max-width: 95vw;
 
   h2 {
     font-size: 36px;
     text-transform: uppercase;
     letter-spacing: 17px;
     margin: 0;
-    line-height: 26px;
+    line-height: 36px;
   }
 }
 
