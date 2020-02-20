@@ -12,8 +12,29 @@
     font-size: 19px;
   }
 
-  a:hover {
-    color: #fc4f4f;
+  .nav-main-menu {
+    a {
+      text-decoration: none;
+      position: relative;
+      color: black;
+    }
+
+    a:after {
+      content: "";
+      width: 0%;
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: 35px;
+      height: 3px;
+      transition: all 0.3s;
+    }
+
+    a:hover::after {
+      width: 75%;
+      background: #fc4f4f;
+    }
   }
 
   .App-logo {
@@ -26,10 +47,14 @@
     justify-content: flex-end;
     -webkit-box-align: center;
     line-height: 1;
-  }
 
-  .nav-header-right a {
-    font-size: 2rem;
-    margin: 0 5px 0 5px;
+    a {
+      font-size: 2rem;
+      margin: 0 5px 0 5px;
+    }
+
+    a:hover {
+      color: #fc4f4f;
+    }
   }
 }
