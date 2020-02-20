@@ -26,7 +26,7 @@ const iconSelector = name => {
   }
 };
 
-const Product = ({ image }) => {
+const Product = ({ image, name }) => {
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
   return (
@@ -66,13 +66,13 @@ const Product = ({ image }) => {
         <img
           className={hover ? "hover" : "non-hover"}
           alt=""
-          src={hover ? image[0] : image[1]}
+          src={hover ? image[1] : image[0]}
         />
       </div>
 
       <div className="product-content mb-40">
         <a href="/">
-          <h3>Name</h3>
+          <h4>{name}</h4>
         </a>
         <p>$price</p>
       </div>
