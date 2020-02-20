@@ -36,29 +36,45 @@ const Product = ({ image }) => {
       onMouseLeave={() => setFocus(false)}
     >
       <div
-        className="image-container"
+        className="image-container mb-40"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        {focus ? (
-          <div className="product-action">
-            {actions.map(action => (
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip id={action}>{action}</Tooltip>}
+        <div className="product-action">
+          {actions.map((action, i) => (
+            <OverlayTrigger
+              key={action}
+              placement="top"
+              overlay={<Tooltip id={action}>{action}</Tooltip>}
+            >
+              <a
+                // className={focus ? `fade-in-right` : "fade-out-right"}
+                style={{
+                  opacity: focus ? 1 : 0,
+                  animation: focus
+                    ? `fade-in-right 0.${5 + i}s ease`
+                    : `fade-out-right 0.${8 - i}s ease`
+                }}
+                href="/"
               >
-                <a className="" href="/">
-                  {iconSelector(action)}
-                </a>
-              </OverlayTrigger>
-            ))}
-          </div>
-        ) : null}
+                {iconSelector(action)}
+              </a>
+            </OverlayTrigger>
+          ))}
+        </div>
+
         <img
           className={hover ? "hover" : "non-hover"}
           alt=""
           src={hover ? image[0] : image[1]}
         />
+      </div>
+
+      <div className="product-content mb-40">
+        <a href="/">
+          <h3>Name</h3>
+        </a>
+        <p>$price</p>
       </div>
     </div>
   );
