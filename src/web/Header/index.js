@@ -12,9 +12,11 @@ export default function Header() {
           <img src={logo} className="App-logo" alt="logo" />
         </Navbar.Brand>
       </Col>
-      <Col className="d-none d-lg-block" xl={9} lg={9}>
+      <Col className="nav-main-menu d-none d-lg-block" xl={9} lg={9}>
         <Nav className="justify-content-center">
-          <Nav.Link href="#features">New</Nav.Link>
+          <Nav.Link className="underline" href="#features">
+            New
+          </Nav.Link>
           <Nav.Link href="#pricing">Clothing</Nav.Link>
           <Nav.Link href="#pricing">Shoes</Nav.Link>
           <Nav.Link href="#pricing">Accessirues</Nav.Link>
