@@ -24,6 +24,7 @@ const SliderArea = () => {
         <div className="dots-container">
           {slider.map((img, i) => (
             <div
+              key={img}
               onClick={() => {
                 setIndex(i);
               }}
@@ -40,7 +41,12 @@ const SliderArea = () => {
         md={{ span: 6, order: 2 }}
       >
         {slider.map((img, i) => (
-          <img className={i === index ? "opaque" : null} alt="" src={img} />
+          <img
+            key={img}
+            className={i === index ? "opaque" : null}
+            alt=""
+            src={img}
+          />
         ))}
       </Col>
     </Row>
