@@ -4,6 +4,7 @@ import SliderArea from "./web/Slider";
 import ProductArea from "./web/ProductArea";
 import DiscountArea from "./web/DiscountArea";
 import SubscribeArea from "./web/SubscribeArea";
+import Footer from "./web/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ProductArea />
       <DiscountArea />
       <SubscribeArea />
+      <Footer />
     </>
   );
 }
