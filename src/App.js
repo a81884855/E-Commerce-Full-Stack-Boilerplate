@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./web/Header";
 import SliderArea from "./web/Slider";
 import ProductArea from "./web/ProductArea";
+import DiscountArea from "./web/DiscountArea";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <SliderArea />
       <ProductArea />
+      <DiscountArea />
     </>
   );
 }
