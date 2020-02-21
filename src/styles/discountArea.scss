@@ -1,0 +1,69 @@
+.discountArea {
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  // background-image: url("../assets/background.jpg");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // opacity: 0.45;
+
+  .backgroundImage {
+    opacity: 0.45;
+    filter: alpha(opacity=45); /* msie */
+    position: absolute;
+    z-index: -10;
+  }
+
+  .content {
+    position: absolute;
+    opacity: 1;
+    text-align: center;
+    display: inline-block;
+    margin: 12% auto;
+    width: 100%;
+
+    p {
+      font-size: 2vw;
+    }
+
+    h1 {
+      font-size: 7.5vw;
+      font-weight: 500;
+    }
+
+    .timer {
+      justify-content: center;
+      display: flex;
+
+      .countdown {
+        border-radius: 50px;
+        border: 1px solid grey;
+        height: 80px;
+        width: 80px;
+        padding: 16px 10px 10px 10px;
+        font-size: 20px;
+        margin: 10px;
+        font-weight: 500;
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .btn-style-1 {
+    text-align: center !important;
+
+    .btn-border {
+      padding: 18px 40px 20px;
+      color: white;
+      background: #fc4f4f;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
