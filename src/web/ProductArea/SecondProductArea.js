@@ -17,6 +17,7 @@ const SecondProductArea = ({ products, title }) => {
                 `/images/products/${product}2.jpeg`
               ]}
               name={product}
+              center={true}
             />
           </Col>
         ))}
