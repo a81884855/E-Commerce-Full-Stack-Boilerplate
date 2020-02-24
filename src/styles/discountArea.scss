@@ -2,17 +2,13 @@
   text-transform: uppercase;
   font-family: "Times New Roman", Times, serif;
   position: relative;
-  // background-image: url("../assets/background.jpg");
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // opacity: 0.45;
 
   .backgroundImage {
     opacity: 0.45;
     filter: alpha(opacity=45); /* msie */
     position: absolute;
     z-index: -10;
+    height: 100%;
   }
 
   .content {
