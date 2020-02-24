@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import Product from "../../Components/Product";
+import Product from "../../../Components/Product";
 
 const ProductArea = ({ products, title }) => {
   const [index, setIndex] = useState(0);

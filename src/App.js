@@ -1,21 +1,18 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomePage from "./web/HomePage";
 import Header from "./web/Header";
-import SliderArea from "./web/Slider";
-import ProductArea from "./web/ProductArea";
-import DiscountArea from "./web/DiscountArea";
-import SubscribeArea from "./web/SubscribeArea";
-import Footer from "./web/Footer";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <SliderArea />
-      <ProductArea />
-      <DiscountArea />
-      <SubscribeArea />
-      <Footer />
-    </>
+      <Switch>
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import Product from "../../Components/Product";
+import Product from "../../../Components/Product";
 
 const SecondProductArea = ({ products, title }) => {
   return (

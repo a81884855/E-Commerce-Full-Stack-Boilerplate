@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import slider1 from "../../assets/slider1.jpg";
-import slider2 from "../../assets/slider2.jpg";
+import slider1 from "../../../assets/slider1.jpg";
+import slider2 from "../../../assets/slider2.jpg";
 
 const slider = [slider1, slider2];
 
