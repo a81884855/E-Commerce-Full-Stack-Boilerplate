@@ -12,8 +12,8 @@ const DiscountArea = () => {
         <h1>OFF 30%</h1>
 
         <CountDown />
-        <div className="btn-style-1 mt-70">
-          <a className="btn-border" href="/" alt="">
+        <div className="btn-style-1 mt-70 ">
+          <a className="btn-border hvr-bounce-to-top" href="/" alt="">
             Shop Now
           </a>
         </div>
