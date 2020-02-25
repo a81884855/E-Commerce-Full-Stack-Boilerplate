@@ -11,7 +11,11 @@ const Footer = () => {
         <Col>
           <img src={logo} className="App-logo" alt="logo" />
         </Col>
-        <Col className="relevance-links" md={12} lg={7}>
+        <Col
+          className="relevance-links d-sm-inline-block  d-lg-inline-flex"
+          md={12}
+          lg={7}
+        >
           <div>
             <a href="/">About US</a>
           </div>

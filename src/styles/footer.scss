@@ -12,8 +12,9 @@
     }
 
     .relevance-links {
-      display: -webkit-inline-box;
+      // display: -webkit-inline-box;
       -webkit-box-pack: center;
+      justify-content: center;
       margin: 20px 0 20px;
       text-transform: uppercase;
       div {

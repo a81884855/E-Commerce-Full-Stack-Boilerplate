@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import Product from "../../../Components/Product";
+import useDimensions from "react-use-dimensions";
 
 const ProductArea = ({ products, title }) => {
   const [index, setIndex] = useState(0);
+  const [ref, { width }] = useDimensions();
 
   return (
     <>
@@ -14,7 +16,7 @@ const ProductArea = ({ products, title }) => {
         <div
           className="wrapper"
           style={{
-            transform: `translateX(${index * -33}vw)`
+            transform: `translateX(${-width * index}px)`
           }}
         >
           {products.map((product, i) => (
@@ -24,6 +26,7 @@ const ProductArea = ({ products, title }) => {
               xs={12}
               key={product + i}
               className={`mt-40 ps-15 ${i === index + 1 ? "active" : ""}`}
+              ref={ref}
             >
               <Product
                 image={[
@@ -38,18 +41,10 @@ const ProductArea = ({ products, title }) => {
       </Row>
 
       <div className="slider-dots-container">
-        <ul className="slider-dots d-none d-md-inline-block">
+        <ul className="slider-dots">
           {products.slice(0, 4).map((product, index) => (
             <li key={product + index}>
               <button onClick={() => setIndex(index)}>0{index + 1}</button>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="slider-dots d-inline-block d-md-none">
-          {products.slice(0, 4).map((product, index) => (
-            <li key={product + index}>
-              <button onClick={() => setIndex(index * 3)}>0{index + 1}</button>
             </li>
           ))}
         </ul>
