@@ -31,6 +31,8 @@
 
     .side-bar {
       flex: 30%;
+
+      // Widget Component
       .widget {
         display: flex;
         flex-direction: column;
@@ -48,6 +50,7 @@
         }
       }
 
+      // Filter Component
       .filter {
         #filter-btn {
           width: 140px;
@@ -63,6 +66,48 @@
         #filter-btn:hover {
           color: white;
           background: #fc4f4f;
+        }
+      }
+
+      // Size Component
+      .size {
+        .btn-container {
+          button {
+            display: inline-block;
+            margin-right: 7px;
+            color: #535353;
+            padding: 11px 26px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+          }
+
+          button:hover {
+            color: white;
+            background: #fc4f4f;
+          }
+
+          button:focus {
+            outline: 0;
+          }
+        }
+      }
+
+      // Color Component
+      .color {
+        .col-6 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+        a {
+          color: black;
+          margin: 10px 2px 10px 0;
+        }
+
+        a:hover {
+          text-decoration: none;
+          color: #fc4f4f;
+          transition: ease 0.3s;
         }
       }
     }
