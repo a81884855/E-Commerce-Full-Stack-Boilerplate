@@ -6,7 +6,7 @@ import { IoIosSearch, IoMdMenu, IoMdHeartEmpty } from "react-icons/io";
 
 export default function Header() {
   return (
-    <div className="nav-container">
+    <div className="nav-container ps-2vw">
       <Col xl={1} lg={1} md={6} sm={6} xs={6}>
         <Navbar.Brand href="/">
           <img src={logo} className="App-logo" alt="logo" />
