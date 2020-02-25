@@ -1,13 +1,11 @@
 // General SCSS
 @import "styles/config.scss";
+@import "styles/header.scss";
 
 // Components SCSS
 @import "styles/product.scss";
 
 // Home Page SCSS
-@import "styles/header.scss";
-@import "styles/Homepage/sliderArea.scss";
-@import "styles/Homepage/productArea.scss";
-@import "styles/Homepage/discountArea.scss";
-@import "styles/Homepage/subscribe-area.scss";
-@import "styles/Homepage/footer.scss";
+@import "styles/Homepage/homepage.scss";
+
+// Shop Page SCSS
