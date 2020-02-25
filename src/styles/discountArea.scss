@@ -2,6 +2,7 @@
   text-transform: uppercase;
   font-family: "Times New Roman", Times, serif;
   position: relative;
+  user-select: none;
 
   .backgroundImage {
     opacity: 0.45;
@@ -54,7 +55,7 @@
     .btn-border {
       padding: 18px 40px 20px;
       color: white;
-      background: #fc4f4f;
+      background: black;
     }
 
     a:hover {
