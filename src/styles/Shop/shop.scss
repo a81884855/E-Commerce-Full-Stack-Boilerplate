@@ -30,8 +30,6 @@
     display: flex;
 
     .side-bar {
-      flex: 30%;
-
       // Widget Component
       .widget {
         display: flex;
@@ -109,10 +107,37 @@
           transition: ease 0.3s;
         }
       }
+
+      // Banner Component
+      .banner {
+        overflow: hidden;
+        width: 90%;
+        cursor: pointer;
+
+        img {
+          z-index: -9;
+          filter: grayscale(100%);
+          transition: all 0.3s ease-in-out;
+        }
+
+        img.active {
+          transform: scale(1.1);
+          filter: grayscale(0);
+        }
+
+        #content {
+          color: white;
+          position: absolute;
+          text-align: center;
+          margin-top: 45%;
+          width: 90%;
+          z-index: 10;
+          user-select: none;
+        }
+      }
     }
 
     .product-area {
-      flex: 70%;
     }
   }
 }
