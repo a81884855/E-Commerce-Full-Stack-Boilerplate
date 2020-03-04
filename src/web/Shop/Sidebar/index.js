@@ -3,6 +3,7 @@ import Widget from "./Widget";
 import Filter from "./Filter";
 import Size from "./Size";
 import Color from "./Color";
+import Banner from "./Banner";
 
 const SideBar = () => {
   return (
@@ -11,6 +12,7 @@ const SideBar = () => {
       <Filter />
       <Size />
       <Color />
+      <Banner />
     </div>
   );
 };
