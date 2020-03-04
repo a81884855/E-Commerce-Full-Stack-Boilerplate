@@ -1,6 +1,7 @@
 import React from "react";
-import { Breadcrumb, Container } from "react-bootstrap";
+import { Breadcrumb, Row, Col } from "react-bootstrap";
 import SideBar from "./Sidebar";
+import ProductArea from "./ProductArea";
 
 const Shop = () => {
   return (
@@ -16,12 +17,14 @@ const Shop = () => {
         </Breadcrumb>
       </div>
 
-      <Container className="shop-area  pt-80">
-        <div className="side-bar">
+      <Row className="shop-area  pt-80">
+        <Col className="side-bar" sm={12} md={3}>
           <SideBar />
-        </div>
-        <div className="product-area"></div>
-      </Container>
+        </Col>
+        <Col className="product-area" sm={12} md={9}>
+          <ProductArea />
+        </Col>
+      </Row>
     </div>
   );
 };
