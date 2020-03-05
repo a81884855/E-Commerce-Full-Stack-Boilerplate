@@ -111,7 +111,6 @@
       // Banner Component
       .banner {
         overflow: hidden;
-        width: 90%;
         cursor: pointer;
 
         img {
@@ -138,6 +137,85 @@
     }
 
     .product-area {
+      .shop-top-bar {
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+        line-height: 24px;
+        font-size: 14px;
+
+        .bar-btn {
+          color: black;
+          cursor: pointer;
+          height: 60px;
+        }
+
+        .bar-left {
+          display: inline-flex;
+
+          .shop-page-list {
+            margin-left: 11px;
+
+            span {
+              margin-left: 11px;
+            }
+
+            .bar-btn:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .bar-right {
+          display: flex;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          align-items: center;
+
+          span {
+            margin-left: 20px;
+            cursor: pointer;
+          }
+
+          .filter {
+            color: #fc4f4f;
+          }
+
+          .dropdown {
+            display: none;
+            animation: fadeUp 1s ease;
+            margin: 20px 15px 0 0;
+            position: absolute;
+            padding: 7px;
+            background-color: #fff;
+            font-size: 11px;
+            box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
+            -webkit-transition: all 250ms ease-out;
+            -o-transition: all 250ms ease-out;
+            transition: all 250ms ease-out;
+            right: 0;
+
+            .dropdown-option {
+              cursor: pointer;
+              padding: 5px;
+              border-radius: 4px;
+            }
+
+            .dropdown-option:hover {
+              background: black;
+              color: white;
+              opacity: 1;
+            }
+          }
+
+          .active {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
