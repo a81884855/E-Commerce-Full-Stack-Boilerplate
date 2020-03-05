@@ -48,12 +48,12 @@ const Product = ({ image, name, center = false }) => {
               overlay={<Tooltip id={action}>{action}</Tooltip>}
             >
               <a
-                // className={focus ? `fade-in-right` : "fade-out-right"}
                 style={{
-                  opacity: focus ? 1 : 0,
                   animation: focus
                     ? `fade-in-right 0.${5 + i}s ease`
-                    : `fade-out-right 0.${8 - i}s ease`
+                    : `fade-out-right 0.${8 - i}s ease`,
+                  opacity: focus ? 1 : 0,
+                  display: focus ? "" : "none"
                 }}
                 href="/"
               >
