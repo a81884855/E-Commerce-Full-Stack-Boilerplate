@@ -18,10 +18,20 @@ const Shop = () => {
       </div>
 
       <Row className="shop-area  pt-80">
-        <Col className="side-bar" sm={12} md={3}>
+        <Col
+          className="side-bar"
+          xs={{ span: 12, order: 2 }}
+          sm={{ span: 12, order: 2 }}
+          md={{ span: 3, order: 1 }}
+        >
           <SideBar />
         </Col>
-        <Col className="product-area" sm={12} md={9}>
+        <Col
+          className="product-area ps-4vw pb-100 "
+          xs={{ span: 12, order: 1 }}
+          sm={{ span: 12, order: 1 }}
+          md={{ span: 9, order: 2 }}
+        >
           <ProductArea />
         </Col>
       </Row>
