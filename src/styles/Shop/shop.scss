@@ -28,6 +28,7 @@
 
   .shop-area {
     display: flex;
+    border-bottom: 2px solid whitesmoke;
 
     .side-bar {
       // Widget Component
@@ -215,6 +216,28 @@
             display: block;
           }
         }
+      }
+    }
+
+    .pagination {
+      justify-content: center;
+
+      span {
+        font-size: 16px;
+        text-align: center;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px black solid;
+        margin-left: 6px;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: #262626;
+        color: #fff;
+        border: 1px solid #262626;
       }
     }
   }
