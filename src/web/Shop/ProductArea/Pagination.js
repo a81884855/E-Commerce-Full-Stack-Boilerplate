@@ -1,11 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Pagination = () => {
-  const [focus, setFocus] = useState(false);
+const Pagination = ({ pageNum, changePage, currentPage }) => {
+  const [page, setPage] = useState([]);
+
+  useEffect(() => {
+    createPagination();
+  }, [pageNum]);
+
+  const createPagination = num => {
+    let temp = [];
+    for (let i = 0; i < pageNum; i += 1) {
+      temp.push(i + 1);
+    }
+    setPage(temp);
+  };
+
   return (
     <div className="pagination">
-      <span>1</span>
-      <span>2</span>
+      {page.map(num => (
+        <span
+          className={num === currentPage ? "active" : ""}
+          key={num}
+          onClick={() => changePage(num)}
+        >
+          {num}
+        </span>
+      ))}
       <span>></span>
     </div>
   );

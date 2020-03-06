@@ -2,19 +2,29 @@ import React, { useState } from "react";
 import { TiThLargeOutline, TiThListOutline } from "react-icons/ti";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
-const ShopTopBar = () => {
+const pageNum = [12, 20, 30];
+
+const ShopTopBar = ({ products, changePagesRange, pagesRange }) => {
   const [filter, setFilter] = useState(false);
   const [sort, setSort] = useState(false);
 
   return (
     <div className="shop-top-bar mt-40">
       <div className="bar-left">
-        <span>Showing 1–12 of 39 results</span>
+        <span>
+          Showing 1 – {pagesRange} of {products.length} results
+        </span>
         <span className="d-none d-md-block shop-page-list">
           <span>Show</span>
-          <span className="bar-btn">12</span>
-          <span className="bar-btn">20</span>
-          <span className="bar-btn">30</span>
+          {pageNum.map(num => (
+            <span
+              className="bar-btn"
+              key={num}
+              onClick={() => changePagesRange(num)}
+            >
+              {num}
+            </span>
+          ))}
         </span>
       </div>
       <div className="bar-right">

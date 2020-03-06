@@ -2,29 +2,18 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Product from "../../../Components/Product";
 
-const newArrival = [
-  "Bella Two-Piece Block Heel Sandals",
-  "Wrap Coat",
-  "Men's Lightweight Windbreaker",
-  "Wrap Coat",
-  "Men's Lightweight Windbreaker",
-  "Bella Two-Piece Block Heel Sandals",
-  "Wrap Coat",
-  "Men's Lightweight Windbreaker",
-  "Wrap Coat",
-  "Men's Lightweight Windbreaker",
-  "Bella Two-Piece Block Heel Sandals",
-  "Wrap Coat",
-  "Men's Lightweight Windbreaker",
-  "Wrap Coat",
-  "Men's Lightweight Windbreaker"
-];
-
-const Products = () => {
+const Products = ({ products }) => {
   return (
     <Row>
-      {newArrival.map((product, i) => (
-        <Col lg={4} md={6} xs={12} className="mt-10 ps-15">
+      {products.map((product, i) => (
+        <Col
+          lg={4}
+          md={6}
+          sm={6}
+          xs={12}
+          className="mt-10 ps-15"
+          key={product + i}
+        >
           <Product
             image={[
               `/images/products/${product}1.jpeg`,
