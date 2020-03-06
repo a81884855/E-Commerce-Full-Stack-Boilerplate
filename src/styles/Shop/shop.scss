@@ -198,6 +198,7 @@
             -o-transition: all 250ms ease-out;
             transition: all 250ms ease-out;
             right: 0;
+            z-index: 9;
 
             .dropdown-option {
               cursor: pointer;
