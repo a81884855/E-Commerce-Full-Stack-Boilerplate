@@ -2,6 +2,7 @@ import React from "react";
 import { Breadcrumb, Row, Col } from "react-bootstrap";
 import SideBar from "./Sidebar";
 import ProductArea from "./ProductArea";
+import Footer from "./Footer";
 
 const Shop = () => {
   return (
@@ -35,6 +36,7 @@ const Shop = () => {
           <ProductArea />
         </Col>
       </Row>
+      <Footer />
     </div>
   );
 };
