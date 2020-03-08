@@ -7,6 +7,10 @@
     .main {
       margin: 0;
 
+      a {
+        color: white;
+      }
+
       .App-logo {
         margin-top: -10px;
         width: 80px;
@@ -24,54 +28,6 @@
             color: white;
             font-size: 14px;
           }
-        }
-      }
-
-      .social-link {
-        margin-top: 10px;
-        padding: 0;
-
-        .icon {
-          border-radius: 50px;
-          font-size: 16px;
-          border: 1px solid grey;
-          padding: 6px 8px 8px 8px;
-          color: white;
-          line-height: 34px;
-          text-align: center;
-          display: inline;
-          margin: 5px;
-          background-color: none;
-        }
-
-        a:hover {
-          transition: all 0.3s;
-          opacity: 0.9;
-          transform: scale(1.1);
-        }
-
-        .facebook:hover {
-          background: #4267b2;
-        }
-
-        .twitter:hover {
-          background: #1ea1f3;
-          transition: background-color 0.3s;
-        }
-
-        .instagram:hover {
-          background: linear-gradient(
-            45deg,
-            #405de6,
-            #5851db,
-            #c13584,
-            #e1306c,
-            #fd1d1d
-          );
-        }
-
-        .youtube:hover {
-          background: #ff0000;
         }
       }
     }
