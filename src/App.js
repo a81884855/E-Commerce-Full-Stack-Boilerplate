@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/Shop">
+          <Route path="/shop">
             <Shop />
           </Route>
           <Route path="/">
