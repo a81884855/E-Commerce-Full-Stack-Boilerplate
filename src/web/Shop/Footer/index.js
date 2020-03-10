@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <Row className="footer pt-80 pb-55">
-      <Col className="mb-30" lg={3} md={3}>
+      <Col className="mb-30" lg={3} md={4}>
         <img src={logo} className="App-logo" alt="logo" />
         <p className="about">
           Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptar
@@ -42,7 +42,7 @@ const Footer = () => {
           </a>
         </div>
       </Col>
-      <Col className="footer-widget" lg={2} sm={3}>
+      <Col className="footer-widget" lg={2} sm={4}>
         <h6 className="mb-30">Company Link</h6>
         <div>
           <a href="/">Guides & Articles</a>
@@ -57,7 +57,7 @@ const Footer = () => {
           <a href="/">Military Discount</a>
         </div>
       </Col>
-      <Col className="footer-widget" lg={2} sm={3}>
+      <Col className="footer-widget" lg={2} sm={4}>
         <h6 className="mb-30">Userful Link</h6>
         <div>
           <a href="/">About Us</a>
@@ -75,7 +75,7 @@ const Footer = () => {
           <a href="/">The Blog</a>
         </div>
       </Col>
-      <Col className="footer-widget" lg={2} sm={3}>
+      <Col className="footer-widget" lg={2} sm={4}>
         <h6 className="mb-30">Contact info</h6>
         <div>
           <IoIosTimer className="icon" />
@@ -97,8 +97,8 @@ const Footer = () => {
       <Col id="map" ref={ref} lg={3} md={12} sm={12} xs={12}>
         <ReactMapGL
           {...viewport}
-          width={width * 0.9}
-          height={width * 0.9}
+          width="100%"
+          height={width * 0.85}
           onViewportChange={setViewport}
         >
           <Marker
