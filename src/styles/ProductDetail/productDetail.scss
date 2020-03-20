@@ -1,0 +1,41 @@
+.productDetail {
+  nav {
+    border-top: 1px solid rgba(174, 174, 174, 0.3);
+  }
+
+  .breadcrumb {
+    background: none;
+    color: black;
+    font-size: 18px;
+
+    a {
+      color: black;
+    }
+  }
+
+  .slickTrackContainer {
+    width: 80px;
+    height: 600px;
+    overflow: hidden;
+
+    .contennt {
+      height: 520px;
+      .image {
+        margin-bottom: 15px;
+      }
+
+      .active {
+        border: 2px solid black;
+      }
+
+      img {
+        margin-top: -1px;
+      }
+    }
+
+    .btn {
+      font-size: x-large;
+      width: 100%;
+    }
+  }
+}
