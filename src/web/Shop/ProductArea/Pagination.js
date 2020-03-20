@@ -5,7 +5,8 @@ const Pagination = ({ pageNum, changePage, currentPage }) => {
 
   useEffect(() => {
     createPagination();
-  }, [pageNum]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const createPagination = num => {
     let temp = [];
