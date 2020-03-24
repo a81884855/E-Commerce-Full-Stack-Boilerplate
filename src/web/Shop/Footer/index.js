@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import logo from "../../../assets/logo.png";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { IoLogoYoutube, IoIosTimer } from "react-icons/io";
-import { AiOutlineMail, AiOutlineHome } from "react-icons/ai";
+import { IoIosTimer } from "react-icons/io";
+import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { FiPhone } from "react-icons/fi";
 import { MdLocationOn } from "react-icons/md";
 import ReactMapGL, { Marker } from "react-map-gl";
 import useDimensions from "react-use-dimensions";
+import SocialLink from "../../../Components/SocialLink";
 
 const Footer = () => {
   const [viewport, setViewport] = useState({
@@ -27,20 +27,7 @@ const Footer = () => {
         <p className="about">
           Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptar
         </p>
-        <div className="social-link">
-          <a className="icon facebook" href="/">
-            <FaFacebookF />
-          </a>
-          <a className="icon twitter" href="/">
-            <FaTwitter />
-          </a>
-          <a className="icon instagram" href="/">
-            <FaInstagram />
-          </a>
-          <a className="icon youtube" href="/">
-            <IoLogoYoutube />
-          </a>
-        </div>
+        <SocialLink facebook twitter googlePlus youtube />
       </Col>
       <Col className="footer-widget" lg={2} sm={4}>
         <h6 className="mb-30">Company Link</h6>
