@@ -1,47 +1,47 @@
-.social-link {
-  margin-top: 10px;
-  padding: 0;
+.footer {
+  color: #767676;
 
-  .icon {
-    border-radius: 50px;
-    font-size: 16px;
-    border: 1px solid grey;
-    padding: 6px 8px 8px 8px;
-    line-height: 34px;
-    text-align: center;
-    display: inline;
-    margin: 5px;
-    background-color: none;
+  a {
+    color: #767676;
   }
 
-  a.icon:hover {
-    transition: all 0.3s;
-    opacity: 0.9;
-    transform: scale(1.1);
-    color: white;
+  a:hover {
+    color: #fc4f4f;
   }
 
-  .facebook:hover {
-    background: #4267b2;
+  .App-logo {
+    margin-top: -10px;
+    width: 80px;
   }
 
-  .twitter:hover {
-    background: #1ea1f3;
-    transition: background-color 0.3s;
+  .about {
+    line-height: 1.84;
+    width: 70%;
+    margin: 16px 0 35px;
   }
 
-  .instagram:hover {
-    background: linear-gradient(
-      45deg,
-      #405de6,
-      #5851db,
-      #c13584,
-      #e1306c,
-      #fd1d1d
-    );
+  .footer-widget {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    flex-direction: column;
+
+    div {
+      margin-bottom: 12px;
+      font-size: 12px;
+      line-height: 20px;
+
+      svg {
+        margin: -2px 2px 0 0px;
+      }
+    }
   }
 
-  .youtube:hover {
-    background: #ff0000;
+  #map {
+    max-width: 500px;
   }
 }

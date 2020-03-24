@@ -29,13 +29,130 @@
       }
 
       img {
-        margin-top: -1px;
+        margin: -1px 0;
       }
     }
 
     .btn {
       font-size: x-large;
       width: 100%;
+    }
+  }
+
+  .content {
+    .categories {
+      font-size: 15px;
+      line-height: 1;
+      list-style: inside circle;
+      margin: 0 0 10px;
+      line-height: 24px;
+      padding: 0;
+    }
+
+    .customer-review {
+      #star {
+        fill: gold;
+      }
+      #empty-star {
+        fill: #d5d6d8;
+      }
+
+      p {
+        display: inline;
+        font-size: 12px;
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .product-details-action-wrap {
+    margin: 50px 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 26px 0;
+    font-size: 18px;
+    text-align: center;
+
+    .button {
+      color: #282828;
+      cursor: pointer;
+      line-height: 20px;
+      margin: 0;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      width: 24px;
+      font-weight: 700;
+      padding: -5px 0;
+      font-size: 22px;
+    }
+
+    .number {
+      width: 40px;
+    }
+
+    .product-details-cart {
+      margin-left: 20px;
+      display: inline-block;
+      font-size: 16px;
+      color: #fff;
+      padding: 18px 25px;
+      background-color: #262626;
+      font-weight: bold;
+      line-height: 1;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+
+    .product-details {
+      padding: 12px 17px;
+      margin-left: 10px;
+    }
+
+    .hover:hover {
+      background: #fc4f4f;
+      color: #fff;
+    }
+  }
+
+  .product-details-info {
+    a {
+      font-size: 15px;
+      color: black;
+      margin-right: 15px;
+
+      svg {
+        font-size: large;
+        padding-right: 4px;
+      }
+    }
+
+    a:hover {
+      color: #fc4f4f;
+      text-decoration: none;
+    }
+  }
+
+  .product-details-meta {
+    margin: 30px 0 30px;
+    font-size: 14px;
+
+    .bold {
+      font-weight: bold;
+    }
+    a {
+      color: black;
+      padding-left: 5px;
+    }
+
+    a:hover {
+      color: #fc4f4f;
     }
   }
 }
