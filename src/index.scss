@@ -4,7 +4,8 @@
 @import "styles/footer.scss";
 
 // Components SCSS
-@import "styles/product.scss";
+@import "styles/components/product.scss";
+@import "styles/components/socialLink.scss";
 
 // Home Page SCSS
 @import "styles/Homepage/homepage.scss";
