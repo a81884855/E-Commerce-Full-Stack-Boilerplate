@@ -2,13 +2,14 @@ import React from "react";
 import Header from "../Header";
 import ProductArea from "./ProductArea";
 import { useParams } from "react-router-dom";
+import Footer from "../Shop/Footer";
 
 const Product = () => {
   const { name } = useParams();
   return (
-    <div className="productDetail">
-      <Header />
+    <div className="productDetail ps-4vw">
       <ProductArea productName={name} />
+      <Footer />
     </div>
   );
 };

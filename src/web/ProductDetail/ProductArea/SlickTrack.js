@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Image } from "react-bootstrap";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { Context as ProductContext } from "../../../context/ProductDetail";
 
-const SlickTrack = ({ images }) => {
-  const [selected, setSelected] = useState(0);
+const SlickTrack = () => {
+  const {
+    state: { images, selected },
+    setSelected
+  } = useContext(ProductContext);
+
   return (
     <div className="slickTrackContainer">
       <div
         className="btn"
         style={{
-          opacity: selected > 0 ? 1 : 0
+          opacity: selected > 0 ? 1 : 0.1
         }}
         onClick={() => {
           if (selected > 0) setSelected(selected - 1);
@@ -37,8 +42,7 @@ const SlickTrack = ({ images }) => {
           opacity: selected < images.length - 1 ? 1 : 0
         }}
         onClick={() => {
-          if (selected < images.length - 1) setSelected(selected - 1);
-          setSelected(selected + 1);
+          if (selected < images.length - 1) setSelected(selected + 1);
         }}
       >
         <FaAngleDown />
