@@ -4,10 +4,10 @@ import logo from "../../../assets/logo.png";
 import { IoIosTimer } from "react-icons/io";
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { FiPhone } from "react-icons/fi";
-import { MdLocationOn } from "react-icons/md";
 import ReactMapGL, { Marker } from "react-map-gl";
 import useDimensions from "react-use-dimensions";
 import SocialLink from "../../../Components/SocialLink";
+import icon from "../../../assets/animat-pencil-color.gif";
 
 const Footer = () => {
   const [viewport, setViewport] = useState({
@@ -89,13 +89,13 @@ const Footer = () => {
           onViewportChange={setViewport}
         >
           <Marker
-            latitude={37.76}
-            longitude={-122.45}
+            latitude={37.8}
+            longitude={-122.42}
             offsetLeft={-20}
             offsetTop={-10}
             className="icon"
           >
-            <MdLocationOn />
+            <img className="locationMaker" src={icon} alt="icon" />
           </Marker>
         </ReactMapGL>
       </Col>
