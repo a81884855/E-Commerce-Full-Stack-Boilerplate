@@ -33,7 +33,7 @@ const fetchProduct = dispatch => async () => {
         "/images/products/Hand White Lace Skater Dress4.jpg"
       ],
       price: "$49.00",
-      star: 4,
+      star: 3.5,
       SKU: "REF. LA-140",
       categories: ["Fashions", "Main 01", "Main 02"],
       tags: ["Blazer", "chair", "Coat", "dress", "light", "Living", "Main 01"]

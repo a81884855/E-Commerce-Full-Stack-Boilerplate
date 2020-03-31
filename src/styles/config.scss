@@ -54,6 +54,10 @@
   padding-top: 140px;
 }
 
+.pb-20 {
+  padding-bottom: 20px;
+}
+
 .pb-40 {
   padding-bottom: 40px;
 }
@@ -179,5 +183,42 @@ img {
   to {
     opacity: 1;
     transform: scaleY(0px);
+  }
+}
+
+@keyframes playJump {
+  0% {
+    transform: translate(-13px, 60%) scale(1.1, 0.7);
+  }
+  10% {
+    transform: translate(-13px, 30%) scale(0.9, 1.2);
+  }
+  20% {
+    transform: translate(-13px, 15%);
+  }
+  40% {
+    transform: translate(-13px, 10%);
+  }
+  // 45%  { top: 160px; height: 40px; width: 60px; margin-left: -30px; }
+  50% {
+    transform: translate(-13px, 10%);
+  }
+  55% {
+    transform: translate(-13px, 18%);
+  }
+  60% {
+    transform: translate(-13px, 20%);
+  }
+  65% {
+    transform: translate(-13px, 25%);
+  }
+  70% {
+    transform: translate(-13px, 30%);
+  }
+  90% {
+    transform: translate(-13px, 60%) scale(1.2, 0.7);
+  }
+  100% {
+    transform: translate(-13px, 60%) scale(1.4, 0.7);
   }
 }

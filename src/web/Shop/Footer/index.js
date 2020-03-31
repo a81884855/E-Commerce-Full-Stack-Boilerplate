@@ -85,7 +85,7 @@ const Footer = () => {
         <ReactMapGL
           {...viewport}
           width="100%"
-          height={width * 0.85}
+          height={width ? width * 0.75 : 300}
           onViewportChange={setViewport}
         >
           <Marker

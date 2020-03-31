@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
-import { IoMdStar, IoMdStarHalf } from "react-icons/io";
+import Rating from "@material-ui/lab/Rating";
 import { Context as ProductContext } from "../../../context/ProductDetail";
 import { FaHeart, FaCarAlt, FaRuler } from "react-icons/fa";
 import { MdCompareArrows, MdLocationOn } from "react-icons/md";
@@ -21,35 +21,15 @@ const Content = () => {
     }
   } = useContext(ProductContext);
 
-  const display = num => {
-    let result = [];
-    while (num > 0) {
-      if (result.length === 5) break;
-      if (num > 1) {
-        result.push("star");
-        num -= 1;
-      } else if (num > 0.5) {
-        result.push("half-star");
-        num -= 0.5;
-      } else {
-        result.push("empty-star");
-      }
-    }
-    return result;
-  };
-
+  console.log(star, "star");
   return (
     <div className="content">
       <h5>{name}</h5>
       <div className="customer-review mt-10">
-        {display(star).map((id, i) =>
-          id === "half-star" ? (
-            <IoMdStarHalf id="star" key={id + i} />
-          ) : (
-            <IoMdStar id={id} key={id + i} />
-          )
-        )}
-        <p>(1 customer review)</p>
+        <Rating name="half-rating-read" value={star} precision={0.5} readOnly />
+        <span id="number">
+          <p>(1 customer review)</p>
+        </span>
       </div>
 
       <h3 className="mt-30 mb-30">{price}</h3>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Breadcrumb, Row, Col, Image } from "react-bootstrap";
 import SlickTrack from "./SlickTrack";
 import Content from "./Content";
+import AdditonalContent from "./AdditionalContent";
 import { Context as ProductContext } from "../../../context/ProductDetail";
 
 const ProductArea = ({ productName }) => {
@@ -23,21 +24,23 @@ const ProductArea = ({ productName }) => {
         </Breadcrumb.Item>
         <Breadcrumb.Item active>{productName}</Breadcrumb.Item>
       </Breadcrumb>
-      <Row>
+      <Row className="pb-100">
         <Col className="d-none d-lg-block" lg={1}>
           <SlickTrack />
         </Col>
         <Col>
           <Row>
-            <Col className=" mt-30" xs={12} sm={5} md={5} lg={5}>
+            <Col className=" mt-30" sm={12} md={6} lg={6} xl={5}>
               <Image src={images[selected]} />
             </Col>
-            <Col className="mt-30" xs={12} sm={7} md={7} lg={6}>
+            <Col className="mt-30" sm={12} md={6} lg={6}>
               <Content />
             </Col>
           </Row>
         </Col>
       </Row>
+
+      <AdditonalContent />
     </div>
   );
 };

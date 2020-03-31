@@ -50,17 +50,18 @@
     }
 
     .customer-review {
-      #star {
-        fill: gold;
-      }
-      #empty-star {
-        fill: #d5d6d8;
+      .MuiRating-root {
+        font-size: 1.2rem;
       }
 
-      p {
-        display: inline;
-        font-size: 12px;
-        padding-left: 5px;
+      #number {
+        position: absolute;
+        margin-top: -3px;
+        p {
+          display: inline;
+          font-size: 13px;
+          padding-left: 5px;
+        }
       }
     }
   }
@@ -153,6 +154,150 @@
 
     a:hover {
       color: #fc4f4f;
+    }
+  }
+
+  .addtionalContent {
+    .description-review-topbar {
+      margin-bottom: 20px;
+      display: -webkit-inline-box;
+
+      div {
+        font-size: 15px;
+        padding: 14px 14px 14px;
+        margin-bottom: 8px;
+        margin-right: 10px;
+        text-align: center;
+        color: #a3a3a3;
+        line-height: 1;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: inline-table;
+      }
+
+      .active {
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+    .video {
+      background-image: url("../../assets/poster.png");
+      background-repeat: no-repeat;
+      height: 100%; /* You must set a specified height */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+      min-height: 300px;
+      max-height: 350px;
+      position: inherit;
+    }
+
+    .button-play {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 8px solid white;
+      box-shadow: 0 4px 6px -3px rgba(black, 0.3),
+        inset 0 3px 4px -2px rgba(black, 0.25);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.465, 1.55) 0.2s,
+        border-width 0.4s cubic-bezier(0.68, -0.55, 0.465, 1.55);
+
+      &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        bottom: 50%;
+        left: 58%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-width: 15px 0px 15px 25px;
+        border-radius: 0;
+        border-left-color: white;
+        transform: translate(-13px, 50%);
+      }
+
+      &:hover,
+      &.active {
+        border: 4px solid white;
+        .circle {
+          stroke-dasharray: -1000px;
+          stroke-dashoffset: -500px;
+          opacity: 0;
+          transition: all 2s linear 0.3s, opacity 0.1s linear 2s;
+        }
+
+        &:before {
+          animation: playJump 0.5s linear infinite;
+        }
+      }
+    }
+
+    .content {
+      line-height: 1.88;
+      font-size: 16px;
+      color: #777;
+      display: grid;
+      padding-left: 20px;
+
+      ul {
+        padding-inline-start: 15px;
+
+        li {
+          margin-bottom: 15px;
+        }
+      }
+
+      .title {
+        display: -webkit-inline-box;
+        margin-top: 10px;
+
+        .category {
+          width: 80px;
+        }
+      }
+    }
+
+    .Review {
+      .comment-container {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        display: flex;
+        margin-top: 20px;
+
+        .customer-image {
+          border: none;
+          width: 25%;
+          max-width: 200px;
+          padding: 1rem;
+          max-height: 200px;
+        }
+
+        .customer-comment {
+          padding: 1rem 2rem;
+          width: 100%;
+
+          .customer-name {
+            font-weight: bold;
+          }
+
+          .star {
+            float: right;
+          }
+
+          .comment-detail {
+            margin-top: 1rem;
+          }
+        }
+      }
     }
   }
 }
