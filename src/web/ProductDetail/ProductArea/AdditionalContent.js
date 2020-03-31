@@ -4,6 +4,7 @@ import "react-modal-video/scss/modal-video.scss";
 import ModalVideo from "react-modal-video";
 import { Context as ProductContext } from "../../../context/ProductDetail";
 import icon from "../../../assets/customer_icon.png";
+import brand from "../../../assets/logo.png";
 import Rating from "@material-ui/lab/Rating";
 
 const descriptions = [
@@ -22,13 +23,17 @@ const display = description => {
       return <AdditionalInformation />;
     case "Review":
       return <Review />;
+    case "Brand":
+      return <Brand />;
+    case "Shipping & Delivery":
+      return <Ship />;
     default:
-      return <div>Description</div>;
+      return <div>Sorry...Some Error Here!!</div>;
   }
 };
 
 const AdditionalContent = () => {
-  const [active, setActive] = useState("Review");
+  const [active, setActive] = useState("Description");
   return (
     <div className="addtionalContent ">
       <div className="description-review-topbar">
@@ -145,6 +150,49 @@ const Review = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const Brand = () => {
+  return (
+    <Row className="brand">
+      <Col>
+        <Image className="image" src={brand} />
+      </Col>
+      <Col sm={12} md={8} lg={10} className="content">
+        Vestibulum hendrerit interdum sodales. Donec sit amet arcu sem. Morbi
+        commodo nunc id nunc auctor, molestie posuere ante accumsan. Integer
+        molestie sit amet felis vitae luctus. Praesent nibh enim, sodales ut
+        risus vitae, interdum tincidunt quam. Cras suscipit et nulla id egestas.
+        Mauris enim nunc, placerat a velit eget, pretium porta metus. Duis
+        euismod varius ipsum, non condimentum augue mollis at. Phasellus felis
+        libero, luctus eget purus in, aliquam fringilla ante. Proin commodo erat
+        eu augue commodo, ac sollicitudin erat iaculis. Suspendisse potenti.
+        Cras eget lobortis lectus, consectetur mollis metus. Sed eu arcu sed
+        purus varius sodales.
+      </Col>
+    </Row>
+  );
+};
+
+const Ship = () => {
+  return (
+    <div className="ship">
+      <ul>
+        <li>Aliquam placerat quam eu vulputate ultricies.</li>
+        <li>
+          Pellentesque maximus ante id risus gravida, a convallis dolor
+          sollicitudin.
+        </li>
+        <li>Etiam quis nisi vulputate, congue leo vitae, consequat erat.</li>
+        <li>
+          Proin laoreet tellus sit amet est facilisis, a iaculis purus
+          tincidunt.
+        </li>
+        <li>Aliquam hendrerit massa nec ex sodales rutrum.</li>
+        <li>Vivamus sit amet nibh eu sem porttitor feugiat.</li>
+      </ul>
     </div>
   );
 };

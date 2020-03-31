@@ -299,5 +299,29 @@
         }
       }
     }
+
+    .brand {
+      display: inline-flex;
+      justify-content: center;
+      .image {
+        max-width: 200px;
+        max-height: 200px;
+      }
+      .contennt {
+        padding: 1.5rem;
+        width: 70%;
+      }
+    }
+
+    .ship {
+      padding: 1rem 0.2rem;
+
+      ul {
+        list-style: none;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
