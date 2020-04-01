@@ -1,13 +1,12 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import logo from "../../../assets/logo.png";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { IoLogoYoutube } from "react-icons/io";
+import SocialLink from "../../../Components/SocialLink";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <Row className="main pt-80 pb-55 ps-2vw">
+      <Row className="main pt-80 pb-55">
         <Col>
           <img src={logo} className="App-logo" alt="logo" />
         </Col>
@@ -33,18 +32,7 @@ const Footer = () => {
           </div>
         </Col>
         <Col className="social-link">
-          <a className="icon facebook" href="/">
-            <FaFacebookF />
-          </a>
-          <a className="icon twitter" href="/">
-            <FaTwitter />
-          </a>
-          <a className="icon instagram" href="/">
-            <FaInstagram />
-          </a>
-          <a className="icon youtube" href="/">
-            <IoLogoYoutube />
-          </a>
+          <SocialLink facebook twitter googlePlus youtube />
         </Col>
       </Row>
       <p className="right-reserved">© 2020 F3shion All rights reserved</p>
