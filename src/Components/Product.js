@@ -26,7 +26,7 @@ const iconSelector = name => {
   }
 };
 
-const Product = ({ image, name, center = false }) => {
+const Product = ({ image, name, center = false, bold = false }) => {
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
   return (
@@ -72,7 +72,14 @@ const Product = ({ image, name, center = false }) => {
 
       <div className={`product-content mb-40 ${center ? "text-center" : ""}`}>
         <a href="/">
-          <h4>{name}</h4>
+          <p
+            style={{
+              fontSize: bold ? 25 : 16,
+              fontWeight: 600
+            }}
+          >
+            {name}
+          </p>
         </a>
         <p>$price</p>
       </div>

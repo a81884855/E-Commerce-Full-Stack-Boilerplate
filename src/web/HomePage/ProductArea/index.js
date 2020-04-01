@@ -6,11 +6,11 @@ const newArrival = [
   "Bella Two-Piece Block Heel Sandals",
   "Wrap Coat",
   "Men's Lightweight Windbreaker",
-  "Wrap Coat",
+  "Double-Breasted Water Resistant Hooded Trench Coat, Created",
   "Men's Lightweight Windbreaker"
 ];
 
-const mustHave = [];
+// const mustHave = [];
 
 const Index = () => {
   return (

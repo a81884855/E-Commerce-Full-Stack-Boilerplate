@@ -55,7 +55,7 @@ const AdditionalContent = () => {
 const Description = () => {
   const [isOpen, setOpen] = useState(false);
   return (
-    <Row>
+    <Row className="pb-40">
       <Col className="pb-20" sm={12} md={7} lg={5}>
         <ModalVideo
           channel="youtube"

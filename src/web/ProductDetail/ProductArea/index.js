@@ -4,6 +4,7 @@ import SlickTrack from "./SlickTrack";
 import Content from "./Content";
 import AdditonalContent from "./AdditionalContent";
 import { Context as ProductContext } from "../../../context/ProductDetail";
+import RelatedProducts from "./RelatedProducts";
 
 const ProductArea = ({ productName }) => {
   const {
@@ -41,6 +42,8 @@ const ProductArea = ({ productName }) => {
       </Row>
 
       <AdditonalContent />
+      <RelatedProducts title="You may also like" />
+      <RelatedProducts title="Related Products" />
     </div>
   );
 };

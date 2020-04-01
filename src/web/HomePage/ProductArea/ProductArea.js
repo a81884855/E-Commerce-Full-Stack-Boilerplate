@@ -34,6 +34,7 @@ const ProductArea = ({ products, title }) => {
                   `/images/products/${product}2.jpeg`
                 ]}
                 name={product}
+                bold
               />
             </Col>
           ))}

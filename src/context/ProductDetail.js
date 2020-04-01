@@ -23,14 +23,14 @@ const fetchProduct = dispatch => async () => {
       filling: "100% polyester.",
       hood_fur: "64% acrylic,23% modacrylic,13% polyester",
       images: [
-        "/images/products/Hand White Lace Skater Dress1.jpg",
-        "/images/products/Hand White Lace Skater Dress2.jpg",
-        "/images/products/Hand White Lace Skater Dress3.jpg",
-        "/images/products/Hand White Lace Skater Dress4.jpg",
-        "/images/products/Hand White Lace Skater Dress1.jpg",
-        "/images/products/Hand White Lace Skater Dress2.jpg",
-        "/images/products/Hand White Lace Skater Dress3.jpg",
-        "/images/products/Hand White Lace Skater Dress4.jpg"
+        "/images/products/Hand White Lace Skater Dress1.jpeg",
+        "/images/products/Hand White Lace Skater Dress2.jpeg",
+        "/images/products/Hand White Lace Skater Dress3.jpeg",
+        "/images/products/Hand White Lace Skater Dress4.jpeg"
+        // "/images/products/Hand White Lace Skater Dress1.jpeg",
+        // "/images/products/Hand White Lace Skater Dress2.jpeg",
+        // "/images/products/Hand White Lace Skater Dress3.jpeg",
+        // "/images/products/Hand White Lace Skater Dress4.jpeg"
       ],
       price: "$49.00",
       star: 3.5,

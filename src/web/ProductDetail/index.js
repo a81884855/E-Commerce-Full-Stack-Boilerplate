@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header";
 import ProductArea from "./ProductArea";
 import { useParams } from "react-router-dom";
 import Footer from "../Shop/Footer";
