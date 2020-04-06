@@ -63,7 +63,6 @@
   width: 350px;
   background: black;
   color: whitesmoke;
-  height: auto;
   padding: 35px 20px;
 
   .list {
@@ -98,10 +97,15 @@
   }
 
   .social-link {
-    padding: 30px;
+    padding: 20px;
 
     a {
       color: whitesmoke;
     }
+  }
+
+  .rightReversed {
+    font-size: 0.85rem;
+    padding: 25px;
   }
 }
