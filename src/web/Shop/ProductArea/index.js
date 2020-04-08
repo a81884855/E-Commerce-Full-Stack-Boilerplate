@@ -24,7 +24,11 @@ const ProductArea = () => {
         pagesRange={pagesRange}
         changePagesRange={changePagesRange}
       />
-      <Products products={products} />
+      <Products
+        products={products}
+        currentPage={currentPage}
+        pagesRange={pagesRange}
+      />
       <Pagination
         pageNum={Math.ceil(products.length / pagesRange)}
         changePage={changePage}

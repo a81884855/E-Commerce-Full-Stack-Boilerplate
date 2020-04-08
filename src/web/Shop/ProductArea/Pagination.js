@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const Pagination = ({ pageNum, changePage, currentPage }) => {
   const [page, setPage] = useState([]);
-
   useEffect(() => {
     createPagination();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [pageNum]);
 
   const createPagination = num => {
     let temp = [];

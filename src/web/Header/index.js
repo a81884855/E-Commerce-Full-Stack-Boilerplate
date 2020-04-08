@@ -18,14 +18,14 @@ export default function Header() {
       </Col>
       <Col className="nav-main-menu d-none d-lg-block" xl={9} lg={9}>
         <Nav className="justify-content-center">
-          <Nav.Link className="underline" href="#features">
+          <Nav.Link className="underline" href="/shop">
             New
           </Nav.Link>
-          <Nav.Link href="#pricing">Clothing</Nav.Link>
-          <Nav.Link href="#pricing">Shoes</Nav.Link>
-          <Nav.Link href="#pricing">Accessirues</Nav.Link>
-          <Nav.Link href="#pricing">Sales</Nav.Link>
-          <Nav.Link href="#pricing">About US</Nav.Link>
+          <Nav.Link href="/shop">Clothing</Nav.Link>
+          <Nav.Link href="/shop">Shoes</Nav.Link>
+          <Nav.Link href="/shop">Accessirues</Nav.Link>
+          <Nav.Link href="/shop">Sales</Nav.Link>
+          <Nav.Link href="/shop">About US</Nav.Link>
         </Nav>
       </Col>
 
