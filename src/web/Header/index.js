@@ -8,6 +8,7 @@ import SideList from "./sidebarList";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [target, setTarget] = useState(null);
   return (
     <div className="nav-container ps-2vw">
       <Col xl={1} lg={1} md={6} sm={6} xs={6}>
@@ -36,26 +37,41 @@ export default function Header() {
         sm={6}
         xs={6}
       >
-        <a href="/">
+        <span>
           <IoMdHeartEmpty />
-        </a>
-        <a href="/">
+        </span>
+        <span
+          onClick={() => {
+            setOpen(true);
+            setTarget("cart");
+          }}
+        >
           <AiOutlineShopping />
-        </a>
-        <a href="/">
+        </span>
+        <span>
           <IoIosSearch />
-        </a>
-        <a onClick={() => setOpen(true)}>
+        </span>
+        <span
+          onClick={() => {
+            setOpen(true);
+            setTarget("menu");
+          }}
+        >
           <IoMdMenu />
-        </a>
+        </span>
       </Col>
       <SwipeableDrawer
         anchor="right"
         open={open}
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
+        onClose={() => {
+          setOpen(false);
+          setTarget(null);
+        }}
+        onOpen={() => {
+          setOpen(true);
+        }}
       >
-        {SideList()}
+        {SideList(target)}
       </SwipeableDrawer>
     </div>
   );

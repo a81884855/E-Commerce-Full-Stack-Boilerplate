@@ -1,13 +1,13 @@
 import React from "react";
 
-import mastercard from "../../assets/mastercard.png";
-import visa from "../../assets/visa.png";
-import amex from "../../assets/amex.png";
-import paypal from "../../assets/paypal.png";
-import SocialLink from "../../Components/SocialLink";
+import mastercard from "../../../assets/mastercard.png";
+import visa from "../../../assets/visa.png";
+import amex from "../../../assets/amex.png";
+import paypal from "../../../assets/paypal.png";
+import SocialLink from "../../../Components/SocialLink";
 
-const SideList = () => (
-  <div className="sideList">
+const Menu = () => (
+  <div className="sideList-menu">
     <div className="list pb-40 d-none d-lg-block">
       <div>About Us</div>
       <div>Help Center</div>
@@ -48,4 +48,4 @@ const SideList = () => (
   </div>
 );
 
-export default SideList;
+export default Menu;
