@@ -35,7 +35,7 @@ const display = description => {
 const AdditionalContent = () => {
   const [active, setActive] = useState("Description");
   return (
-    <div className="addtionalContent ">
+    <div className="addtionalContent mb-30">
       <div className="description-review-topbar">
         {descriptions.map(description => (
           <div
