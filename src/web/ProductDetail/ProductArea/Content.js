@@ -21,7 +21,6 @@ const Content = () => {
     }
   } = useContext(ProductContext);
 
-  console.log(star, "star");
   return (
     <div className="content">
       <h5>{name}</h5>
