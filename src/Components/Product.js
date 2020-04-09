@@ -34,6 +34,7 @@ const Product = ({ image, name, center = false, bold = false }) => {
       className="product-container"
       onMouseEnter={() => setFocus(true)}
       onMouseLeave={() => setFocus(false)}
+      onMouseDown={() => window.location.replace(`/product-detail/${name}`)}
     >
       <div
         className="image-container mb-40"
