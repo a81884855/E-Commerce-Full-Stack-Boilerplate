@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import HomePage from "./web/HomePage";
 import Header from "./web/Header";
 import Shop from "./web/Shop";
@@ -7,21 +7,23 @@ import Product from "./web/ProductDetail";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/">
       <Header />
-      <Switch>
+      <>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
         <Route path="/shop">
           <Shop />
         </Route>
         <Route path="/product-detail/:name">
           <Product />
         </Route>
-        <Route path="/">
-          <HomePage />
+        <Route path="/hello">
+          <div>Hello</div>
         </Route>
-        <Route path="/">Hello World</Route>
-      </Switch>
-    </Router>
+      </>
+    </HashRouter>
   );
 }
 
