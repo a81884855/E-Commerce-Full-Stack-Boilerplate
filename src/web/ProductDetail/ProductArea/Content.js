@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Rating from "@material-ui/lab/Rating";
 import { Context as ProductContext } from "../../../context/ProductDetail";
 import { FaHeart, FaCarAlt, FaRuler } from "react-icons/fa";
@@ -18,8 +18,13 @@ const Content = () => {
       categories,
       tags,
       star
-    }
+    },
+    fetchProduct
   } = useContext(ProductContext);
+
+  useEffect(() => {
+    fetchProduct();
+  }, []);
 
   return (
     <div className="content">
