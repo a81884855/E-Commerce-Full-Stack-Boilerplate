@@ -6,39 +6,37 @@
     background: #a9a9a9;
 
     .fade-in-right {
-      // opacity: 1;
       animation: fade-in-right 1s ease;
     }
 
     .fade-out-right {
-      // opacity: 0;
       animation: fade-out-right 1s ease;
     }
 
     .product-action {
       text-align: center;
       position: absolute;
-      display: inline-block;
-      top: 35%;
+      display: block;
+      top: 32%;
       left: 0;
       right: 0;
       transform: translateY(-50%);
       z-index: 9;
 
-      a {
-        height: 46px;
-        width: 46px;
+      div {
+        height: 2.8rem;
+        width: 2.8rem;
         margin: 5px;
         position: relative;
         text-align: center;
         display: inline-block;
-        font-size: 26px;
+        font-size: 1.6rem;
         border-radius: 50px;
         background: white;
         color: black;
       }
 
-      a:hover {
+      div:hover {
         background: #fc4f4f;
         color: white;
       }
@@ -67,11 +65,13 @@
 
 @keyframes fade-in-right {
   from {
+    margin-top: -27px;
     opacity: 0;
-    -webkit-transform: translate3d(50px, 0, 0);
+    -webkit-transform: translate3d(50px, -10px, 0);
     transform: translate3d(50px, 0, 0);
   }
   to {
+    margin-top: -27px;
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
