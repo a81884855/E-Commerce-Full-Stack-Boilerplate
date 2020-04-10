@@ -34,11 +34,11 @@ const Cart = () => {
                   onClick={() => {
                     setCookie("products", [
                       ...products.slice(0, index),
-                      ...products.slice(index + 1)
+                      ...products.slice(index + 1),
                     ]);
                     setProduct([
                       ...products.slice(0, index),
-                      ...products.slice(index + 1)
+                      ...products.slice(index + 1),
                     ]);
                   }}
                 >
@@ -51,10 +51,11 @@ const Cart = () => {
           Subtotal:{" "}
           <span className="cart-amount">
             $
-            {products.reduce(
-              (accum, curr) => accum + curr.price * curr.unit,
-              0
-            )}
+            {products &&
+              products.reduce(
+                (accum, curr) => accum + curr.price * curr.unit,
+                0
+              )}
           </span>
         </h6>
         <div className="cart-checkout-btn">
@@ -65,13 +66,13 @@ const Cart = () => {
                 {
                   name: "Hand White Lace Skater Dress",
                   price: 49,
-                  unit: 1
+                  unit: 1,
                 },
                 {
                   name: "Bella Two-Piece Block Heel Sandals",
                   price: 29,
-                  unit: 1
-                }
+                  unit: 1,
+                },
               ]);
             }}
           >
