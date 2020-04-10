@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/E-Commerce-Full-Stack-Boilerplate/static/css/main.3fcd86d1.chunk.css",
-    "main.js": "/E-Commerce-Full-Stack-Boilerplate/static/js/main.aeff6aa8.chunk.js",
-    "main.js.map": "/E-Commerce-Full-Stack-Boilerplate/static/js/main.aeff6aa8.chunk.js.map",
+    "main.css": "/E-Commerce-Full-Stack-Boilerplate/static/css/main.ab163b13.chunk.css",
+    "main.js": "/E-Commerce-Full-Stack-Boilerplate/static/js/main.fe0f90b7.chunk.js",
+    "main.js.map": "/E-Commerce-Full-Stack-Boilerplate/static/js/main.fe0f90b7.chunk.js.map",
     "runtime-main.js": "/E-Commerce-Full-Stack-Boilerplate/static/js/runtime-main.a9a33616.js",
     "runtime-main.js.map": "/E-Commerce-Full-Stack-Boilerplate/static/js/runtime-main.a9a33616.js.map",
     "static/css/2.5a3a7055.chunk.css": "/E-Commerce-Full-Stack-Boilerplate/static/css/2.5a3a7055.chunk.css",
-    "static/js/2.97c75bd6.chunk.js": "/E-Commerce-Full-Stack-Boilerplate/static/js/2.97c75bd6.chunk.js",
-    "static/js/2.97c75bd6.chunk.js.map": "/E-Commerce-Full-Stack-Boilerplate/static/js/2.97c75bd6.chunk.js.map",
+    "static/js/2.f0aeca18.chunk.js": "/E-Commerce-Full-Stack-Boilerplate/static/js/2.f0aeca18.chunk.js",
+    "static/js/2.f0aeca18.chunk.js.map": "/E-Commerce-Full-Stack-Boilerplate/static/js/2.f0aeca18.chunk.js.map",
     "index.html": "/E-Commerce-Full-Stack-Boilerplate/index.html",
-    "precache-manifest.27fbe7e738eaa93abe41f1b4373e0259.js": "/E-Commerce-Full-Stack-Boilerplate/precache-manifest.27fbe7e738eaa93abe41f1b4373e0259.js",
+    "precache-manifest.35a683ac73556a575027663f663abf95.js": "/E-Commerce-Full-Stack-Boilerplate/precache-manifest.35a683ac73556a575027663f663abf95.js",
     "service-worker.js": "/E-Commerce-Full-Stack-Boilerplate/service-worker.js",
     "static/css/2.5a3a7055.chunk.css.map": "/E-Commerce-Full-Stack-Boilerplate/static/css/2.5a3a7055.chunk.css.map",
-    "static/css/main.3fcd86d1.chunk.css.map": "/E-Commerce-Full-Stack-Boilerplate/static/css/main.3fcd86d1.chunk.css.map",
-    "static/js/2.97c75bd6.chunk.js.LICENSE.txt": "/E-Commerce-Full-Stack-Boilerplate/static/js/2.97c75bd6.chunk.js.LICENSE.txt",
+    "static/css/main.ab163b13.chunk.css.map": "/E-Commerce-Full-Stack-Boilerplate/static/css/main.ab163b13.chunk.css.map",
+    "static/js/2.f0aeca18.chunk.js.LICENSE.txt": "/E-Commerce-Full-Stack-Boilerplate/static/js/2.f0aeca18.chunk.js.LICENSE.txt",
     "static/media/animat-pencil-color.gif": "/E-Commerce-Full-Stack-Boilerplate/static/media/animat-pencil-color.d6ac3f08.gif",
     "static/media/background.jpg": "/E-Commerce-Full-Stack-Boilerplate/static/media/background.dcc0f9f7.jpg",
     "static/media/banner.jpg": "/E-Commerce-Full-Stack-Boilerplate/static/media/banner.f91e9aa1.jpg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.a9a33616.js",
     "static/css/2.5a3a7055.chunk.css",
-    "static/js/2.97c75bd6.chunk.js",
-    "static/css/main.3fcd86d1.chunk.css",
-    "static/js/main.aeff6aa8.chunk.js"
+    "static/js/2.f0aeca18.chunk.js",
+    "static/css/main.ab163b13.chunk.css",
+    "static/js/main.fe0f90b7.chunk.js"
   ]
 }
