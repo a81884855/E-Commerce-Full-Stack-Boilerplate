@@ -6,7 +6,7 @@ import { Context as ProductContext } from "../../../context/ProductDetail";
 const SlickTrack = () => {
   const {
     state: { images, selected },
-    setSelected
+    setSelected,
   } = useContext(ProductContext);
 
   return (
@@ -14,7 +14,7 @@ const SlickTrack = () => {
       <div
         className="btn"
         style={{
-          opacity: selected > 0 ? 1 : 0.1
+          opacity: selected > 0 ? 1 : 0.1,
         }}
         onClick={() => {
           if (selected > 0) setSelected(selected - 1);
@@ -29,17 +29,21 @@ const SlickTrack = () => {
             className={`image ${i === selected ? "active" : ""}`}
             onClick={() => setSelected(i)}
             style={{
-              display: `${i < selected || i > selected + 3 ? "none" : ""}`
+              display: `${i < selected || i > selected + 3 ? "none" : ""}`,
             }}
           >
-            <Image src={image} />
+            <Image
+              src={`${
+                process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}/`
+              }${image}`}
+            />
           </div>
         ))}
       </div>
       <div
         className="btn"
         style={{
-          opacity: selected < images.length - 1 ? 1 : 0
+          opacity: selected < images.length - 1 ? 1 : 0,
         }}
         onClick={() => {
           if (selected < images.length - 1) setSelected(selected + 1);

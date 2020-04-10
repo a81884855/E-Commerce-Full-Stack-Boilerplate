@@ -5,6 +5,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { IoIosSearch, IoMdMenu, IoMdHeartEmpty } from "react-icons/io";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import SideList from "./sidebarList";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -12,20 +13,22 @@ export default function Header() {
   return (
     <div className="nav-container ps-2vw">
       <Col xl={1} lg={1} md={6} sm={6} xs={6}>
-        <Navbar.Brand href="/">
-          <img src={logo} className="App-logo" alt="logo" />
+        <Navbar.Brand>
+          <Link to="/">
+            <img src={logo} className="App-logo" alt="logo" />
+          </Link>
         </Navbar.Brand>
       </Col>
       <Col className="nav-main-menu d-none d-lg-block" xl={9} lg={9}>
         <Nav className="justify-content-center">
-          <Nav.Link className="underline" href="/shop">
+          <Link className="underline" to="/shop">
             New
-          </Nav.Link>
-          <Nav.Link href="/shop">Clothing</Nav.Link>
-          <Nav.Link href="/shop">Shoes</Nav.Link>
-          <Nav.Link href="/shop">Accessirues</Nav.Link>
-          <Nav.Link href="/shop">Sales</Nav.Link>
-          <Nav.Link href="/shop">About US</Nav.Link>
+          </Link>
+          <Link to="/shop">Clothing</Link>
+          <Link to="/shop">Shoes</Link>
+          <Link to="/shop">Accessirues</Link>
+          <Link to="/shop">Sales</Link>
+          <Link to="/shop">About US</Link>
         </Nav>
       </Col>
 

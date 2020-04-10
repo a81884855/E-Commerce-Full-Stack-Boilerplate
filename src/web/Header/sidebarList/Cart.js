@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cookies, setCookie] = useCookies(["name"]);
@@ -24,7 +25,9 @@ const Cart = () => {
                   />
                 </div>
                 <div className="cart-title">
-                  <a href={`/product-detail/${product.name}`}>{product.name}</a>
+                  <Link to={`/product-detail/${product.name}`}>
+                    {product.name}
+                  </Link>
                   <p className="price">
                     {product.unit} x ${product.price}
                   </p>
@@ -51,16 +54,17 @@ const Cart = () => {
           Subtotal:{" "}
           <span className="cart-amount">
             $
-            {products &&
-              products.reduce(
-                (accum, curr) => accum + curr.price * curr.unit,
-                0
-              )}
+            {products
+              ? products.reduce(
+                  (accum, curr) => accum + curr.price * curr.unit,
+                  0
+                )
+              : 0}
           </span>
         </h6>
         <div className="cart-checkout-btn">
-          <a
-            href="/"
+          <Link
+            to="/"
             onClick={() => {
               setCookie("products", [
                 {
@@ -77,10 +81,10 @@ const Cart = () => {
             }}
           >
             View Cart
-          </a>
+          </Link>
         </div>
         <div className="cart-checkout-btn">
-          <a href="/">Checkout</a>
+          <Link to="/">Checkout</Link>
         </div>
       </div>
     </div>

@@ -5,11 +5,12 @@ import Content from "./Content";
 import AdditonalContent from "./AdditionalContent";
 import { Context as ProductContext } from "../../../context/ProductDetail";
 import RelatedProducts from "./RelatedProducts";
+import { Link } from "react-router-dom";
 
 const ProductArea = ({ productName }) => {
   const {
     state: { images, selected },
-    fetchProduct
+    fetchProduct,
   } = useContext(ProductContext);
 
   useEffect(() => {
@@ -19,8 +20,10 @@ const ProductArea = ({ productName }) => {
   return (
     <div className="pt-120">
       <Breadcrumb className="mt-10 pt-40 pb-30">
-        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+        <Breadcrumb.Item as={Link} to="/">
+          Home
+        </Breadcrumb.Item>
+        <Breadcrumb.Item as={Link} to="/shop">
           Shop
         </Breadcrumb.Item>
         <Breadcrumb.Item active>{productName}</Breadcrumb.Item>
@@ -32,7 +35,11 @@ const ProductArea = ({ productName }) => {
         <Col>
           <Row>
             <Col className=" mt-30" sm={12} md={6} lg={6} xl={5}>
-              <Image src={images[selected]} />
+              <Image
+                src={`${
+                  process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}/`
+                }${images[selected]}`}
+              />
             </Col>
             <Col className="mt-30" sm={12} md={6} lg={6}>
               <Content />

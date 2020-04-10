@@ -6,7 +6,7 @@ import {
   Modal,
   Row,
   Col,
-  Image
+  Image,
 } from "react-bootstrap";
 
 import { FaRegEye, FaHeart } from "react-icons/fa";
@@ -18,7 +18,7 @@ const actions = [
   "Quick Shop",
   "Add to Wishlist",
   "Add to Compare",
-  "Add to Cart"
+  "Add to Cart",
 ];
 
 const Product = ({ image, name, center = false, bold = false }) => {
@@ -26,7 +26,7 @@ const Product = ({ image, name, center = false, bold = false }) => {
   const [focus, setFocus] = useState(false);
   const [show, setShow] = useState(false);
 
-  const iconSelector = name => {
+  const iconSelector = (name) => {
     switch (name) {
       case "Quick Shop":
         return (
@@ -77,7 +77,7 @@ const Product = ({ image, name, center = false, bold = false }) => {
           className="product-action"
           style={{
             animation: focus ? `fade-in-right 0.7s ease` : `fade-out-right`,
-            display: focus ? "" : "none"
+            display: focus ? "" : "none",
           }}
         >
           {actions.map((action, i) => (
@@ -94,22 +94,30 @@ const Product = ({ image, name, center = false, bold = false }) => {
           <img
             className={hover ? "hover" : "non-hover"}
             alt=""
-            src={hover ? image[1] : image[0]}
+            src={
+              hover
+                ? `${process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}/`}${
+                    image[1]
+                  }`
+                : `${process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}/`}${
+                    image[0]
+                  }`
+            }
           />
         </Link>
       </div>
 
       <div className={`product-content mb-40 ${center ? "text-center" : ""}`}>
-        <a href="/">
+        <Link to="/">
           <p
             style={{
               fontSize: bold ? 25 : 16,
-              fontWeight: 600
+              fontWeight: 600,
             }}
           >
             {name}
           </p>
-        </a>
+        </Link>
         <p>$price</p>
       </div>
       <Modal size="lg" show={show} onHide={() => setShow(false)}>
@@ -120,7 +128,11 @@ const Product = ({ image, name, center = false, bold = false }) => {
         <Modal.Body>
           <Row>
             <Col md={12} lg={6}>
-              <Image src={image[0]} />
+              <Image
+                src={`${
+                  process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}/`
+                }${image[0]}`}
+              />
             </Col>
             <Col className="productDetail">
               <Content />

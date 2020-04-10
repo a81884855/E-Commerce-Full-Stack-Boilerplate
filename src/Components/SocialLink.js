@@ -4,7 +4,7 @@ import {
   FaTwitter,
   FaInstagram,
   FaPinterest,
-  FaGooglePlusG
+  FaGooglePlusG,
 } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 
@@ -14,22 +14,22 @@ const SocialLink = ({
   twitter,
   pinterest,
   instagram,
-  youtube
+  youtube,
 }) => {
   return (
     <div id="social-link">
       {facebook && (
-        <a className="icon facebook" href="/">
+        <a className="icon facebook" href="/https://www.facebook.com/">
           <FaFacebookF />
         </a>
       )}
       {twitter && (
-        <a className="icon twitter" href="/">
+        <a className="icon twitter" href="https://www.twitter.com/">
           <FaTwitter />
         </a>
       )}
       {instagram && (
-        <a className="icon instagram" href="/">
+        <a className="icon instagram" href="https://www.instagram.com/">
           <FaInstagram />
         </a>
       )}
