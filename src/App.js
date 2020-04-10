@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import HomePage from "./web/HomePage";
-// import Header from "./web/Header";
-// import Shop from "./web/Shop";
-// import Product from "./web/ProductDetail";
+import HomePage from "./web/HomePage";
+import Header from "./web/Header";
+import Shop from "./web/Shop";
+import Product from "./web/ProductDetail";
 
 function App() {
   return (
     <Router>
-      {/* <Header /> */}
+      <Header />
       <Switch>
-        {/* <Route path="/shop">
+        <Route path="/shop">
           <Shop />
         </Route>
         <Route path="/product-detail/:name">
@@ -18,7 +18,7 @@ function App() {
         </Route>
         <Route path="/">
           <HomePage />
-        </Route> */}
+        </Route>
         <Route path="/">Hello World</Route>
       </Switch>
     </Router>
