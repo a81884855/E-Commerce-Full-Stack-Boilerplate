@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import ShopTopBar from "./ShopTopBar";
+import ShopTopBar from "./ShopToBar";
 import Products from "./Products";
 import Pagination from "./Pagination";
 import { Context as ProductContext } from "../../../context/ProductContext";
