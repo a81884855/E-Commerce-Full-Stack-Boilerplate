@@ -20,7 +20,9 @@ const Cart = () => {
               <div className="item" key={index}>
                 <div className="img">
                   <img
-                    src={`/images/products/${product.name}1.jpeg`}
+                    src={`${
+                      process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}/`
+                    }${`/images/products/${product.name}1.jpeg`}`}
                     alt="product"
                   />
                 </div>
