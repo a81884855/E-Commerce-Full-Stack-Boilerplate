@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
 import { Navbar, Nav, Col } from "react-bootstrap";
 import { AiOutlineShopping } from "react-icons/ai";
@@ -6,10 +6,13 @@ import { IoIosSearch, IoMdMenu, IoMdHeartEmpty } from "react-icons/io";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import SideList from "./sidebarList";
 import { Link } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [target, setTarget] = useState(null);
+  const [cookies] = useCookies(["cart"]);
+
   return (
     <div className="nav-container ps-2vw">
       <Col xl={1} lg={1} md={6} sm={6} xs={6}>
@@ -49,6 +52,9 @@ export default function Header() {
             setTarget("cart");
           }}
         >
+          {!!cookies.cart.length && (
+            <span className="unit">{cookies.cart.length}</span>
+          )}
           <AiOutlineShopping />
         </span>
         <span>

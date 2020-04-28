@@ -60,6 +60,19 @@
     span:hover {
       color: #fc4f4f;
     }
+
+    .unit {
+      position: absolute;
+      border-radius: 50px;
+      font-size: 11px;
+      background: #fc4f4f;
+      width: 1rem;
+      height: 1rem;
+      padding: 0.2rem 0 0 0.3rem;
+      color: white;
+      margin: -0.55rem 0 0 0.55rem;
+      transition: 1.2s linear;
+    }
   }
 }
 

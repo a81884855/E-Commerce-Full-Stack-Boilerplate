@@ -3,7 +3,7 @@ import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const [cookies, setCookie] = useCookies(["name"]);
+  const [cookies, setCookie] = useCookies(["cart"]);
   const [products, setProduct] = useState([]);
 
   useEffect(() => {

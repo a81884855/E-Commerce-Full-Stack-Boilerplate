@@ -8,7 +8,7 @@ import SocialLink from "../../../Components/SocialLink";
 import { useCookies } from "react-cookie";
 
 const Content = () => {
-  const [cookies, setCookie] = useCookies(["name"]);
+  const [cookies, setCookie] = useCookies(["cart"]);
   const [fly, setFly] = useState(false);
 
   const {
