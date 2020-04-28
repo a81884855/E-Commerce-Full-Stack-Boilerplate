@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import { Navbar, Nav, Col } from "react-bootstrap";
 import { AiOutlineShopping } from "react-icons/ai";
