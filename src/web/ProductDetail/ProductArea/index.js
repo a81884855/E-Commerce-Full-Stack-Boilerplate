@@ -33,6 +33,10 @@ const ProductArea = ({ productName }) => {
           <Row>
             <Col className=" mt-30" sm={12} md={6} lg={6} xl={5}>
               <Image
+                style={{
+                  maxHeight: 650,
+                  objectFit: "contain",
+                }}
                 src={`${
                   process.env.PUBLIC_URL && `${process.env.PUBLIC_URL}/`
                 }${images[selected]}`}
