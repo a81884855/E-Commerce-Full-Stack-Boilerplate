@@ -14,6 +14,7 @@ const ProductArea = ({ productName }) => {
 
   useEffect(() => {
     fetchProduct();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
