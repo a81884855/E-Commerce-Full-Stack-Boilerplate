@@ -5,8 +5,11 @@ import { Context as ProductContext } from "../../../context/ProductDetail";
 import { FaHeart, FaCarAlt, FaRuler } from "react-icons/fa";
 import { MdCompareArrows, MdLocationOn } from "react-icons/md";
 import SocialLink from "../../../Components/SocialLink";
+import { useCookies } from "react-cookie";
 
 const Content = () => {
+  const [cookies, setCookie] = useCookies(["name"]);
+
   const {
     state: {
       name,
@@ -18,16 +21,36 @@ const Content = () => {
       categories,
       tags,
       star,
-      number,
+      unit,
     },
     fetchProduct,
-    changeNumber,
+    changeUnit,
   } = useContext(ProductContext);
 
   useEffect(() => {
     fetchProduct();
   }, []);
 
+  const addToCart = () => {
+    let cart = [...cookies.cart];
+    for (let product of cart) {
+      if (product.name === name) {
+        product.unit += unit;
+      }
+      return setCookie("cart", [...cart]);
+    }
+
+    setCookie("cart", [
+      ...cart,
+      {
+        name,
+        price,
+        unit,
+      },
+    ]);
+  };
+
+  console.log(cookies);
   return (
     <div className="content">
       <h5>{name}</h5>
@@ -38,21 +61,23 @@ const Content = () => {
         </span>
       </div>
 
-      <h3 className="mt-30 mb-30">{price}</h3>
+      <h3 className="mt-30 mb-30">${price.toFixed(2)}</h3>
       <ul className="categories">
         <li className="mt-6">Composition: {composition}</li>
         <li className="mt-6">Filling: {filling}</li>
         <li className="mt-6">Hood fur: {hood_fur}</li>
       </ul>
       <div className="product-details-action-wrap">
-        <div className="button" onClick={() => changeNumber(-1)}>
+        <div className="button" onClick={() => changeUnit(-1)}>
           -
         </div>
-        <span className="number">{number}</span>
-        <div className="button" onClick={() => changeNumber(1)}>
+        <span className="number">{unit}</span>
+        <div className="button" onClick={() => changeUnit(1)}>
           +
         </div>
-        <div className="product-details-cart hover">Add to cart</div>
+        <div className="product-details-cart hover" onClick={addToCart}>
+          Add to cart
+        </div>
         <div className="product-details hover">
           <FaHeart />
         </div>

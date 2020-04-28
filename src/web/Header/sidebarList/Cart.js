@@ -7,8 +7,8 @@ const Cart = () => {
   const [products, setProduct] = useState([]);
 
   useEffect(() => {
-    setProduct(cookies.products);
-  }, [cookies.products]);
+    setProduct(cookies.cart);
+  }, [cookies.cart]);
 
   return (
     <div className="sideList-cart">
@@ -37,7 +37,7 @@ const Cart = () => {
                 <div
                   className="cart-delete"
                   onClick={() => {
-                    setCookie("products", [
+                    setCookie("cart", [
                       ...products.slice(0, index),
                       ...products.slice(index + 1),
                     ]);
@@ -65,25 +65,7 @@ const Cart = () => {
           </span>
         </h6>
         <div className="cart-checkout-btn">
-          <Link
-            to="/"
-            onClick={() => {
-              setCookie("products", [
-                {
-                  name: "Hand White Lace Skater Dress",
-                  price: 49,
-                  unit: 1,
-                },
-                {
-                  name: "Bella Two-Piece Block Heel Sandals",
-                  price: 29,
-                  unit: 1,
-                },
-              ]);
-            }}
-          >
-            View Cart
-          </Link>
+          <Link to="/">View Cart</Link>
         </div>
         <div className="cart-checkout-btn">
           <Link to="/">Checkout</Link>
