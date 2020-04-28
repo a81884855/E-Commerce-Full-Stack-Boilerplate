@@ -6,7 +6,7 @@ const recommendProducts = [
   "Bella Two-Piece Block Heel Sandals",
   "Wrap Coat",
   "Men's Lightweight Windbreaker",
-  "Double-Breasted Water Resistant Hooded Trench Coat, Created"
+  "Double-Breasted Water Resistant Hooded Trench Coat, Created",
 ];
 
 const RelatedProducts = ({ title }) => {
@@ -25,11 +25,12 @@ const RelatedProducts = ({ title }) => {
                 ? "d-none d-sm-block"
                 : ""
             }
+            key={product}
           >
             <Product
               image={[
                 `/images/products/${product}1.jpeg`,
-                `/images/products/${product}2.jpeg`
+                `/images/products/${product}2.jpeg`,
               ]}
               name={product}
             />
