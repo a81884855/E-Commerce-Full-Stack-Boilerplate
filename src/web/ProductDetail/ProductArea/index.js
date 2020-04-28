@@ -5,7 +5,6 @@ import Content from "./Content";
 import AdditonalContent from "./AdditionalContent";
 import { Context as ProductContext } from "../../../context/ProductDetail";
 import RelatedProducts from "./RelatedProducts";
-import { Link } from "react-router-dom";
 
 const ProductArea = ({ productName }) => {
   const {
@@ -20,13 +19,11 @@ const ProductArea = ({ productName }) => {
   return (
     <div className="pt-120">
       <Breadcrumb className="mt-10 pt-40 pb-30">
-        <Breadcrumb.Item as={Link} to="/">
-          Home
+        <Breadcrumb.Item href="/#/">Home</Breadcrumb.Item>
+        <Breadcrumb.Item href="/#/shop">Shop</Breadcrumb.Item>
+        <Breadcrumb.Item href="#" active>
+          {productName}
         </Breadcrumb.Item>
-        <Breadcrumb.Item as={Link} to="/shop">
-          Shop
-        </Breadcrumb.Item>
-        <Breadcrumb.Item active>{productName}</Breadcrumb.Item>
       </Breadcrumb>
       <Row className="pb-100">
         <Col className="d-none d-lg-block" lg={1}>
