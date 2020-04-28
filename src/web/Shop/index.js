@@ -11,8 +11,9 @@ const Shop = () => {
         <h1>Welcome!</h1>
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item href="/shop">Shop</Breadcrumb.Item>
-          <Breadcrumb.Item active>Data</Breadcrumb.Item>
+          <Breadcrumb.Item href="/shop" active>
+            Shop
+          </Breadcrumb.Item>
         </Breadcrumb>
       </div>
 
