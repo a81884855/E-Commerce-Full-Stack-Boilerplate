@@ -5,16 +5,24 @@ const productReducer = (state, action) => {
     case "fetch_product":
       return {
         ...state,
-        ...action.playload
+        ...action.playload,
       };
     case "set_selected":
       return { ...state, selected: action.playload };
+    case "change_number":
+      return {
+        ...state,
+        number:
+          state.number + action.playload > 0
+            ? state.number + action.playload
+            : 0,
+      };
     default:
       return state;
   }
 };
 
-const fetchProduct = dispatch => async () => {
+const fetchProduct = (dispatch) => async () => {
   // const response = await trackerApi.get("/tracks");
   const response = {
     data: {
@@ -26,7 +34,7 @@ const fetchProduct = dispatch => async () => {
         "/images/products/Hand White Lace Skater Dress1.jpeg",
         "/images/products/Hand White Lace Skater Dress2.jpeg",
         "/images/products/Hand White Lace Skater Dress3.jpeg",
-        "/images/products/Hand White Lace Skater Dress4.jpeg"
+        "/images/products/Hand White Lace Skater Dress4.jpeg",
         // "/images/products/Hand White Lace Skater Dress1.jpeg",
         // "/images/products/Hand White Lace Skater Dress2.jpeg",
         // "/images/products/Hand White Lace Skater Dress3.jpeg",
@@ -36,19 +44,24 @@ const fetchProduct = dispatch => async () => {
       star: 3.5,
       SKU: "REF. LA-140",
       categories: ["Fashions", "Main 01", "Main 02"],
-      tags: ["Blazer", "chair", "Coat", "dress", "light", "Living", "Main 01"]
-    }
+      tags: ["Blazer", "chair", "Coat", "dress", "light", "Living", "Main 01"],
+      number: 1,
+    },
   };
   dispatch({ type: "fetch_product", playload: response.data });
 };
 
-const setSelected = dispatch => async num => {
+const setSelected = (dispatch) => async (num) => {
   dispatch({ type: "set_selected", playload: num });
+};
+
+const changeNumber = (dispatch) => async (num) => {
+  dispatch({ type: "change_number", playload: num });
 };
 
 export const { Provider, Context } = createDataContext(
   productReducer,
-  { fetchProduct, setSelected },
+  { fetchProduct, setSelected, changeNumber },
   {
     name: "",
     composition: "",
@@ -60,6 +73,6 @@ export const { Provider, Context } = createDataContext(
     SKU: "",
     categories: [],
     tags: [],
-    star: 0
+    star: 0,
   }
 );

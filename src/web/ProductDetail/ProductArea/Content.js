@@ -17,9 +17,11 @@ const Content = () => {
       SKU,
       categories,
       tags,
-      star
+      star,
+      number,
     },
-    fetchProduct
+    fetchProduct,
+    changeNumber,
   } = useContext(ProductContext);
 
   useEffect(() => {
@@ -43,9 +45,13 @@ const Content = () => {
         <li className="mt-6">Hood fur: {hood_fur}</li>
       </ul>
       <div className="product-details-action-wrap">
-        <div className="button">-</div>
-        <span className="number">2</span>
-        <div className="button">+</div>
+        <div className="button" onClick={() => changeNumber(-1)}>
+          -
+        </div>
+        <span className="number">{number}</span>
+        <div className="button" onClick={() => changeNumber(1)}>
+          +
+        </div>
         <div className="product-details-cart hover">Add to cart</div>
         <div className="product-details hover">
           <FaHeart />
@@ -77,7 +83,7 @@ const Content = () => {
         </div>
         <div className="mt-6">
           <span className="bold">Categories: </span>
-          {categories.map(category => (
+          {categories.map((category) => (
             <span key={category}>
               <a href="#">{category}</a>,
             </span>
@@ -85,7 +91,7 @@ const Content = () => {
         </div>
         <div className="mt-6">
           <span className="bold">Tags: </span>
-          {tags.map(tag => (
+          {tags.map((tag) => (
             <span key={tag}>
               <a href="#">{tag}</a>,
             </span>
