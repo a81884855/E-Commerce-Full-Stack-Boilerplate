@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Rating from "@material-ui/lab/Rating";
 import { Context as ProductContext } from "../../../context/ProductDetail";
 import { FaHeart, FaCarAlt, FaRuler } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { useCookies } from "react-cookie";
 
 const Content = () => {
   const [cookies, setCookie] = useCookies(["name"]);
+  const [fly, setFly] = useState(false);
 
   const {
     state: {
@@ -50,7 +51,12 @@ const Content = () => {
     ]);
   };
 
-  console.log(cookies);
+  const flyToCart = () => {
+    setFly(true);
+    setTimeout(() => setFly(false), 700);
+  };
+
+  console.log(fly);
   return (
     <div className="content">
       <h5>{name}</h5>
@@ -75,8 +81,15 @@ const Content = () => {
         <div className="button" onClick={() => changeUnit(1)}>
           +
         </div>
-        <div className="product-details-cart hover" onClick={addToCart}>
+        <div
+          className="product-details-cart hover"
+          onClick={() => {
+            addToCart();
+            flyToCart();
+          }}
+        >
           Add to cart
+          <div className={`fly ${fly ? "fly-animated" : ""}`}></div>
         </div>
         <div className="product-details hover">
           <FaHeart />
