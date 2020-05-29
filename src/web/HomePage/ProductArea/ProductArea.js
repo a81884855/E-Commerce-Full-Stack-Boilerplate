@@ -16,7 +16,7 @@ const ProductArea = ({ products, title }) => {
         <div
           className="wrapper"
           style={{
-            transform: `translateX(${-width * index}px)`
+            transform: `translateX(${-width * index}px)`,
           }}
         >
           {products.map((product, i) => (
@@ -25,13 +25,16 @@ const ProductArea = ({ products, title }) => {
               sm={12}
               xs={12}
               key={product + i}
+              style={{
+                maxWidth: "100vw",
+              }}
               className={`mt-40 ps-15 ${i === index + 1 ? "active" : ""}`}
               ref={ref}
             >
               <Product
                 image={[
                   `/images/products/${product}1.jpeg`,
-                  `/images/products/${product}2.jpeg`
+                  `/images/products/${product}2.jpeg`,
                 ]}
                 name={product}
                 bold
